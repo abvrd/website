@@ -1,0 +1,26 @@
+<div class="row">
+    <div ng-repeat="service in services" class="col s12 m6 l4">
+        <div class="card bloc-service {{service.color.bg}}">
+            <div class="card-content {{service.color.text}}-text">
+                <span class="card-title">{{service.label}}</span>
+                <ul class="collection {{service.color.text}}-text">
+                    <li ng-repeat="elem in service.elements" class="collection-item {{service.color.bg}}">
+                        <div class="" ng-click="toggleListElement(elem)">
+                            <i class=" {{elem.icon}}"></i> {{elem.label}}
+                        </div>
+                        <div class="cssSlideUp" ng-show="elem.visibleDesc">
+                            <p class="">{{elem.desc}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-action">
+                <br>
+            </div>
+        </div>
+        <!--<div class="bloc-service">
+            <h3>Software backend</h3>
+            <p>Creating web services, APIs and third parties architecture.</p>
+        </div>-->
+    </div>
+</div>

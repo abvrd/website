@@ -1,0 +1,411 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$fa-font-path: "/bower_components/font-awesome/fonts";
+$roboto-font-path: "/bower_components/Materialize/font/Roboto/";
+// bower:scss
+@import "Materialize/sass/materialize.scss";
+@import "font-awesome/scss/font-awesome.scss";
+// endbower
+
+$highlightColor: #de5a51;
+
+html, body {
+    height: 100%;
+}
+
+/* animation slide div */
+.ng-hide-add, .ng-hide-remove {
+    /* ensure visibility during the transition */
+    display: block !important; /* yes, important */
+}
+
+.cssSlideUp {
+    transition: .3s linear all;
+    height: 70px;
+    overflow: hidden;
+}
+.cssSlideUp.ng-hide {
+    height:0;
+}
+/* end animation slide div */
+
+body {
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    h2 {
+        font-size: 2.56rem;
+    }
+    h3 {
+        font-size: 1.92rem;
+    }
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+footer a.right {
+    font-size: 1.3em;
+    padding: 0 5px;
+}
+/* Custom page header */
+.header {
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+    }
+}
+
+.navbar {
+    margin-bottom: 0px !important;
+}
+
+#nav-mobile {
+    display: none;
+    nav {
+        padding: 0 10px;
+    }
+}
+
+nav {
+    ul a, i {
+        color: #444; 
+    }
+    .brand-logo {
+        color: #444;
+        font-size: 22px;
+    }
+}
+
+section {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    padding: 25px 0px;
+    overflow: hidden;
+    .section-transition {
+        /*margin-top: 50px;*/
+        height: 400px;
+    }
+    p {
+        a {
+            color: $highlightColor;
+            text-decoration: none;
+        }
+        a:focus, a:hover {
+            color: $highlightColor;
+            text-decoration: underline;
+        }
+    }
+    .card .card-title {
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+.section-overlay {
+    background: url('/images/pattern.png');
+    top: 0;
+    opacity: 0.3;
+    background-attachment: fixed;
+    width: 100%;
+    height:100%;
+    position: absolute;
+}
+
+.section-background {
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.section-no-padding {
+    padding-bottom: 0px !important;
+}
+
+.section-title {
+    text-align: center;
+}
+
+//main title
+.title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    z-index: 300;
+}
+
+.title-divider {
+    $title-divider-color: #333333;
+    max-width: 480px;
+    margin: 40px auto 10px;
+    position: relative;
+    color: $title-divider-color;
+    .title-divider-left {
+        width: 220px;
+        height: 1px;
+        background-color: $title-divider-color;
+        position: absolute;
+        left: 0;
+        top: -11px;
+        z-index: 2;
+    }
+    .title-divider-right {
+        width: 220px;
+        height: 1px;
+        background-color: $title-divider-color;
+        position: absolute;
+        right: 0;
+        top: -11px;
+        z-index: 1;
+    }
+    .title-divider-icon {
+        font-size: 18px !important;
+        margin: 0 auto;
+        position: relative;
+        top: -20px;
+        z-index: 10;
+        display: table !important;
+    }
+}
+
+.title-line {
+    position: relative;
+    z-index: 150;
+    border-top: 1px solid #ededed;
+    width: 670px;
+    margin: 10px auto;
+}
+
+.title-contact {
+    margin-top: 10px;
+}
+
+#home {
+    background-image: url('/images/home.jpg');
+    min-height: 600px;
+    .title h1, .title h2 {
+        font-style: normal;
+        color: #FFFFFF;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px black, 0 2px 2px #ccc;
+    }
+    .title h1 {
+        font-size: 120px;
+    }
+    .title h2 {
+        font-size: 60px;
+    }
+    .title h1.small {
+        font-size: 80px;
+    }
+    .typing {
+        margin: 0 auto;
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 8.9em;
+        animation: type 4s steps(50, end);
+        span{
+            animation: blink 1s infinite;
+        }
+    }
+}
+
+#about {
+    .facts {
+        text-align: center;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.71);
+        .fact-number {
+            color: $highlightColor;
+            font-size: 35px;
+            font-weight: 700;
+        }
+    }
+}
+
+#skills {
+    .card {
+        .card-image {
+            width: 130px;
+            height:130px;
+            padding: 10px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .card-image img {
+            width: 100%;
+        }
+        .card-content {
+            text-align: center;
+            color: rgba(0, 0, 0, 0.71);
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.experiences {
+    margin-top: 10px;
+    .exp-title {
+        font-weight: bold;
+    }
+    .exp-desc {
+        display: block;
+    }
+    p {
+        color: rgba(0, 0, 0, 0.71);
+    }
+    .row {
+        margin-bottom: 10px;
+    }
+    .label {
+        margin: 0px 5px 5px 0px;
+        border-radius: 2px;
+        font-weight: 300;
+        font-size: 0.8rem;
+        color: #fff;
+        padding: 1px 6px;
+        text-align: center;
+
+    }
+    .label-gray {
+        background-color: #777;
+    }
+    .label-blue {
+        background-color: #337ab7;
+    }
+    .label-green {
+        background-color: #5cb85c;
+    }
+    .label-orange {
+        background-color: #f0ad4e;
+    }
+    .label-red {
+        background-color: #d9534f;
+    }
+    .label-purple {
+        background-color: #563d7c;
+    }
+    .label-cyan {
+        background-color: #5bc0de;
+    }
+}
+
+@keyframes type{ 
+    from { width: 0; } 
+} 
+
+@keyframes blink{
+    to{opacity: .0;}
+}
+
+.bloc-service {
+    i {
+        margin-right: 1rem;
+    }
+    li {
+        cursor: pointer;
+    }
+    p {
+        margin: 0;
+        padding: 0.9rem;
+        font-size: 15px;
+    }
+    .card-action {
+        border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+        a, a:hover {
+            color: #FFFFFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.more-detail-link {
+    text-align: right;
+}
+
+.highlight-word {
+    color: $highlightColor;
+}
+
+.border-box-bottom {
+    border-style: solid solid solid dashed;
+    border-width: 0px 0px 60px 2000px;
+    margin-top: -60px;
+    border-color: transparent transparent #fff;
+}
+
+.border-box-top {
+    border-style: solid dashed solid solid;
+    border-width: 0px 2000px 60px 0px;
+    margin-bottom: -60px;
+    border-color: transparent #fff transparent transparent;
+    position: relative;
+    display: block;
+}
+
+@media screen and (max-width: 360px) {
+    #about .about-picture {
+        max-width: 150px ! important;
+    }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        /*max-width: 730px;*/
+    }
+
+    #home {
+        height: 100vh;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #nav-mobile {
+        display: block;
+    }
+    #nav-main {
+        display: none;
+    }
+    .title h1 {
+        font-size: 80px !important;
+    }
+    .title h2 {
+        font-size: 28px !important;
+    }
+    .title h1.small {
+        font-size: 35px !important;
+    }
+    .title-divider {
+        .title-divider-right, .title-divider-left {
+            width: 140px !important;
+        }
+    }
+    .secondary-content {
+        position: initial !important;
+        float: none !important;
+    }
+    .experiences {
+        .label {
+            display: inline-block !important;
+        }
+    }
+}

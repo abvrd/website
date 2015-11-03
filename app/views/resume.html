@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title red-text text-darken-1">5 years experienced developer & project facilitator !</span>
+        <p>Experimented on SAAS architectures and web services, I create full-stack and scalable web environments.</p>
+        <p>Design and development of back/front offices relying on internal or external APIs and databases are my job.</p>
+        <p>Please have a look on the projects described below and download my <a target="_blank" ng-href="{{resume}}">full resume</a> for more details.</p>
+            </div>
+            </div>
+    </div>
+</div>
+<div class="row">
+    <ul class="collection experiences">
+        <li ng-repeat="exp in experiences" class="collection-item avatar">
+            <i class="{{exp.company.icon}} red circle"></i>
+            <span class="title exp-title">{{exp.title}}</span>
+            <div class="exp-labels">
+                <span ng-repeat="label in exp.labels" class="label label-{{label.color}}">{{label.title}}</span>
+            </div>
+            <p>
+                {{exp.company.title}} | {{exp.company.activity}} - {{exp.company.location}} <br>
+                <span class="exp-desc" ng-repeat="desc in exp.desc">
+                    <i class="fa fa-terminal"></i> {{desc}}
+                </span>
+            </p>
+            <a href="#!" class="secondary-content">{{exp.date}}</a> 
+        </li>
+    </ul>
+</div>
+<!--<div class="row">
+    <div class="col s12" ng-repeat="exp in experiences">
+        <experience exp-title="exp.title" exp-company="exp.company" exp-date="exp.date" exp-desc="exp.desc" 
+                    exp-labels="exp.labels"></experience>
+    </div>
+</div>-->
+<div class="row">
+    <div class="col s12 more-details-link">
+        <div class="wow animated pulse">
+            <a target="_blank" ng-href="{{resume}}">More details ?</a>
+        </div>
+    </div>
+</div>
