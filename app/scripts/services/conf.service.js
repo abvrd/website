@@ -133,7 +133,7 @@ angular.module('siteProApp').provider('AppConfig', function () {
             }
         ],
         resume: {
-            file: 'http://arnaudbouvard.com/resume2015-detail.pdf',
+            file: 'http://arnaudbouvard.com/public/web-developer-detail.pdf',
             experiences: [
                 {
                     date: 'September 2015 - Today',
