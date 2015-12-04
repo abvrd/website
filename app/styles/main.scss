@@ -354,12 +354,6 @@ section {
     display: block;
 }
 
-@media screen and (max-width: 360px) {
-    #about .about-picture {
-        max-width: 150px ! important;
-    }
-}
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
@@ -378,7 +372,11 @@ section {
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 380px) {
+    #about .about-picture {
+        max-width: 150px ! important;
+    }
+    
     #nav-mobile {
         display: block;
     }
